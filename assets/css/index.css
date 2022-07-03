@@ -17,6 +17,11 @@ html,body {
 
 a {
     text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
 }
 
 /* =============================>> [ MOBILE FIRST LAYOUT ] <<============================= */
@@ -24,13 +29,14 @@ a {
 body {
     font-family: sans-serif;
     color: #fff;
-    background: url(../images/background.svg) no-repeat center center / cover;
+    background-color: #000;
 }
 
 header {
     width: 100%;
-    background: #fff;
     position: fixed;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: #000;
 }
 
 .wrapper {
@@ -38,65 +44,63 @@ header {
 }
 
 header .header__navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header .header__navigation img {
-    width: 8rem;
-}
-
-header .header__navigation .navigation__links {
-    display: none;
-    list-style: none;
-
-}
-
-header .btn__mobile {
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background: transparent;
-}
-
-header .btn__mobile img {
-    width: 3.6rem;
-}
-
-/* =============================>> [ MAIN ] <<============================= */
-
-main {
-    height: calc(100vh - 70.95px);
+    width: 100%;
+    height: 7.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-main .section__content {
-    text-align: center;
+header .navigation__links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
 }
 
-main .section__content h3 {
-    font-size: 1.6rem;
+/* =============================>> [ MAIN ] <<============================= */
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-main .section__content h1 {
-    font-size: 5rem;
+main .content__section {
+    display: grid;
+    place-items: center;
 }
 
-main .section__content h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+main .content__section img {
+    width: 30rem;
 }
 
-main .section__content .linkedin__link {
-    font-weight: 700;
-    padding: 1rem 5rem;
+main .text__section h1 {
+    color: #042FF8;
+}
+
+main .social__medias {
+    display: flex;
+    gap: 3rem;
+}
+
+main .social__medias a {
+    font-weight: 600;
+    padding: 1rem 2rem;
     border-radius: 2rem;
-    color: #3D41C8;
-    background-color: #fff;
-    transition-duration: .3s;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease-in;
+}
+
+main .social__medias a:nth-child(1):hover {
+    background-color: #0e76a8;
+    border-color: #0e76a8;
+}
+
+main .social__medias a:nth-child(2):hover {
+    background-color: #171515;
+    border-color: #171515;
 }
 
 /* =============================>> [ SECTION ] <<============================= */
@@ -145,6 +149,17 @@ section .card {
 
     background-color: #0E2A47;
     overflow: hidden;
+
+    position: relative;
+}
+
+section .card img {
+    transition: all 0.2s ease;
+}
+
+section .card img:hover {
+    transform-style: preserve-3d;
+    transform: scale(1.2);
 }
 
 section .card span {
@@ -163,4 +178,16 @@ section .card span:hover {
 section #project__01 img {
     width: 100%;
     object-fit: cover;
+}
+
+footer {
+    height: 30px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+footer span {
+    color: #042FF8;
 }
