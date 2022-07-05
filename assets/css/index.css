@@ -112,9 +112,10 @@ section .title-section {
 /* =============================>> [ SECTION ABOUT ] <<============================= */
 
 section.about {
+    height: 100vh;
     padding: 10rem 0;
     text-align: center;
-    background-color: #113255;
+    background-color: #111;
 }
 
 section.about h2 {
@@ -129,8 +130,8 @@ section.projects {
     align-items: center;
     gap: 6rem;
     padding-top: 10rem;
+    padding-bottom: 2rem;
     height: 100vh;
-    background-color: #0B2239;
 }
 
 section .card {
@@ -186,6 +187,7 @@ footer {
     gap: 5px;
     align-items: center;
     justify-content: center;
+    background-color: #111;
 }
 
 footer span {
